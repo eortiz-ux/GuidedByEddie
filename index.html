@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Guided by Eddie — The Ripple Project</title>
-  <meta name="description" content="Guided by Eddie — real estate rooted in humanity. The Ripple Project: every closing feeds someone." />
+  <title>Guided by Eddie™ — The Ripple Project</title>
+  <meta name="description" content="Guided by Eddie™ — real estate rooted in humanity. The Ripple Project: every closing feeds someone." />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#000;
       --text:#f5f5f5;
       --muted:#a9a9a9;
-      --accent:#b23a48; /* brick red */
-      --accent-2:#e3b341; /* warm gold */
+      --accent:#b23a48;
+      --accent-2:#e3b341;
       --divider:#222;
       --max-width:980px;
     }
@@ -20,52 +20,43 @@
     html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}
     .wrap{max-width:var(--max-width);margin:0 auto;padding:48px 20px}
 
-    /* Headings */
     h1,h2{font-family:'Oswald','DM Sans',sans-serif;margin:0 0 12px 0;letter-spacing:.6px}
     h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1}
     h2{font-size:clamp(1.2rem,2.6vw,1.8rem)}
 
-    /* Blocks & spacing */
     header{padding-top:28px;padding-bottom:10px;text-align:center}
     section{padding:48px 0;border-bottom:1px solid var(--divider)}
     p{margin:.85rem 0;max-width:70ch}
     .muted{color:var(--muted)}
 
-    /* Emphasis */
     strong.anchor{color:var(--accent)}
     .lead{font-size:1.05rem}
 
-    /* Quotes */
     .quote{margin-top:1.25rem;font-size:1.15rem;font-weight:700;color:var(--accent-2);max-width:70ch}
     .banner-quote{display:block;background:rgba(227,179,65,.08);padding:24px;border-radius:8px;margin:18px auto;max-width:78ch}
 
-    /* Cards */
     .cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
     @media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
     .card{background:rgba(255,255,255,.04);padding:20px;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
 
-    /* CTAs */
     .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
     .btn{display:inline-block;padding:12px 18px;border-radius:8px;font-weight:700;border:2px solid var(--accent);background:var(--accent);color:#000;text-decoration:none}
     .btn.alt{background:transparent;color:var(--accent);border-color:var(--accent)}
     .btn:hover{transform:translateY(-3px)}
     .destinations{margin-top:8px;font-size:.95rem}
 
-    /* Footer */
     footer{padding:40px 20px;text-align:center}
     .hashtags{color:var(--muted);font-size:.95rem;margin-top:8px}
+    .hashtags span{margin:0 8px}
 
-    /* Video embeds */
     .video-embed{position:relative;width:100%;max-width:880px;margin:18px auto 0;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
     .video-embed::before{content:"";display:block;padding-top:56.25%}
     .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     .video-cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
     @media(min-width:760px){.video-cards{grid-template-columns:repeat(2,1fr)}}
-    .video-card{display:block;padding:16px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.06);text-decoration:none}
+    .video-card{display:block;padding:16px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.06);text-decoration:none;color:var(--text)}
     .video-card:hover{border-color:rgba(178,58,72,.6)}
-    .video-card, .video-card *{color:var(--text)}
 
-    /* Accessibility */
     a:focus{outline:3px solid rgba(178,58,72,.35);outline-offset:3px}
   </style>
 </head>
@@ -81,33 +72,31 @@
       </div>
     </header>
 
-    <section id="overlooked" aria-labelledby="overlooked-title">
-      <h2 id="overlooked-title">Built for the Overlooked</h2>
+    <section id="overlooked">
+      <h2>Built for the Overlooked</h2>
       <p class="muted">Raised in Chicago, forged in service. Guided by pain but not defined by it.</p>
       <p>This space is for those who were told they care too much, and for anyone trying to heal what they did not break.</p>
     </section>
 
-    <section id="guided" aria-labelledby="guided-title">
-      <h2 id="guided-title">Guided by Eddie</h2>
+    <section id="guided">
+      <h2>Guided by Eddie™</h2>
       <p class="lead">I have always been this way. I finally accepted my heart. I serve people by being human first, agent second. I am not here to look better than you, I am here to serve you. Impact matters more than image.</p>
-      <div class="cards" role="list">
-        <div class="card" role="listitem"><strong>Service</strong><br>Compassion over commission. Clarity over pressure. We do the work with care.</div>
-        <div class="card" role="listitem"><strong>Impact</strong><br>Feeding people, supporting animals, micro scholarships. Real help, tracked and shared.</div>
-        <div class="card" role="listitem"><strong>Transparency</strong><br>Plain language, clear steps, steady updates. You will know what is happening and why.</div>
+      <div class="cards">
+        <div class="card"><strong>Service</strong><br>Compassion over commission. Clarity over pressure. We do the work with care.</div>
+        <div class="card"><strong>Impact</strong><br>Feeding people, supporting animals, micro scholarships. Real help, tracked and shared.</div>
+        <div class="card"><strong>Transparency</strong><br>Plain language, clear steps, steady updates. You will know what is happening and why.</div>
       </div>
     </section>
 
-    <section id="fool" aria-labelledby="fool-title">
-      <h2 id="fool-title">The Relatable Fool</h2>
+    <section id="fool">
+      <h2>The Relatable Fool</h2>
       <p>I am not polished. I am seeking truth. I might not say the right things every time. I am still figuring out why there is so much pain, and what happened to the love. I ask the questions many people carry in silence, so we can search together.</p>
       <p class="quote">Not polished, not perfect, just real.</p>
 
-      <!-- Featured video -->
-      <div class="video-embed" aria-label="Featured Relatable Fool video">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Relatable Fool featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Relatable Fool featured video" allowfullscreen></iframe>
       </div>
 
-      <!-- Quick links -->
       <div class="video-cards">
         <a class="video-card" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">
           <strong>Hear the raw truth</strong><br> TikTok @relatablefool
@@ -118,25 +107,24 @@
       </div>
     </section>
 
-    <section id="ripple" aria-labelledby="ripple-title">
-      <h2 id="ripple-title">The Ripple Project</h2>
+    <section id="ripple">
+      <h2>The Ripple Project</h2>
       <p class="lead">Every home I help close fuels community care. <strong class="anchor">10% of my commission</strong>, and often more, is reinvested into what <strong class="anchor">you</strong> care about. Micro grants, local food programs, ramps for elders, and dignity for the forgotten.</p>
-      <div class="cards" role="list">
-        <div class="card" role="listitem"><strong>How it funds</strong><br>Each closing routes a portion to community needs chosen alongside clients.</div>
-        <div class="card" role="listitem"><strong>What it supports</strong><br>Groceries, school supplies, crisis response, elderly care.</div>
-        <div class="card" role="listitem"><strong>Foundation</strong><br>Ripple Impact Foundation, nonprofit in formation, tax exempt status pending.</div>
+      <div class="cards">
+        <div class="card"><strong>How it funds</strong><br>Each closing routes a portion to community needs chosen alongside clients.</div>
+        <div class="card"><strong>What it supports</strong><br>Groceries, school supplies, crisis response, elderly care.</div>
+        <div class="card"><strong>Foundation</strong><br>Ripple Impact Foundation, nonprofit in formation, tax exempt status pending.</div>
       </div>
       <div class="banner-quote quote">Every closing feeds someone, heals someone, and loves someone who’s forgotten.</div>
       <p class="muted">It is not charity, it is restoration.</p>
 
-      <!-- Optional video -->
-      <div class="video-embed" aria-label="Ripple Project highlight">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_OR_REMOVE" title="Ripple Project highlight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_OR_REMOVE" title="Ripple Project highlight" allowfullscreen></iframe>
       </div>
     </section>
 
-    <section id="next" aria-labelledby="next-title">
-      <h2 id="next-title">What Comes Next</h2>
+    <section id="next">
+      <h2>What Comes Next</h2>
       <p>You are not alone. We are here together. This will be our platform, a movement of healing, rebuilding, and remembering. Share this with someone who needs hope, invite a neighbor, help us find our tribe again.</p>
       <div class="ctas">
         <a class="btn" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple (Calendly)</a>
@@ -145,8 +133,8 @@
       <p class="destinations muted">If you cannot donate right now, sharing this page helps more than you know.</p>
     </section>
 
-    <section id="connect" aria-labelledby="connect-title">
-      <h2 id="connect-title">Connect</h2>
+    <section id="connect">
+      <h2>Connect</h2>
       <p class="muted">Conversation, not a pitch. Choose the door that fits you.</p>
       <div class="ctas">
         <a class="btn" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple (Calendly)</a>
@@ -154,11 +142,11 @@
         <a class="btn alt" href="https://www.facebook.com/guidedbyeddie" target="_blank" rel="noopener">Stand Together (Facebook)</a>
         <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">The Ripple is Real (TikTok)</a>
       </div>
-      <p class="hashtags">#GuidedByEddie &nbsp; • &nbsp; #RippleProject &nbsp; • &nbsp; #RelatableFool</p>
+      <p class="hashtags"><span>#GuidedByEddie</span><span>#RippleProject</span><span>#RelatableFool</span></p>
     </section>
 
-    <footer class="muted" role="contentinfo">
-      <p>&copy; 2025 Guided by Eddie. Real estate rooted in humanity.</p>
+    <footer role="contentinfo">
+      <p>&copy; 2025 Guided by Eddie™ — Real estate rooted in humanity.</p>
     </footer>
   </div>
 </body>
