@@ -11,13 +11,13 @@
       --bg:#000;
       --text:#f5f5f5;
       --muted:#a9a9a9;
-      --accent:#32d48e;
-      --accent-2:#1ae0ff;
+      --accent:#b23a48; /* brick red: grit + heart */
+      --accent-2:#e3b341; /* warm gold: dignity + legacy */
       --divider:#222;
       --max-width:980px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}
     .wrap{max-width:var(--max-width);margin:0 auto;padding:48px 20px}
 
     /* Headings */
@@ -37,7 +37,7 @@
 
     /* Quote styles */
     .quote{margin-top:1.25rem;font-size:1.15rem;font-weight:700;color:var(--accent-2);max-width:70ch}
-    .banner-quote{display:block;background:rgba(26,224,255,0.04);padding:24px;border-radius:8px;margin:18px auto;max-width:78ch}
+    .banner-quote{display:block;background:rgba(227,179,65,0.08);padding:24px;border-radius:8px;margin:18px auto;max-width:78ch}
 
     /* Cards */
     .cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
@@ -55,8 +55,17 @@
     footer{padding:40px 20px;text-align:center}
     .hashtags{color:var(--muted);font-size:0.95rem;margin-top:8px}
 
+    /* Video embeds */
+    .video-embed{position:relative;width:100%;max-width:880px;margin:18px auto 0;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02)}
+    .video-embed::before{content:"";display:block;padding-top:56.25%}
+    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+    @media(min-width:760px){.video-cards{grid-template-columns:repeat(2,1fr)}}
+    .video-card{display:block;padding:16px;border:1px solid rgba(255,255,255,0.06);border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none}
+    .video-card:hover{border-color:rgba(178,58,72,0.5)}
+
     /* Accessibility */
-    a:focus{outline:3px solid rgba(50,212,142,0.18);outline-offset:3px}
+    a:focus{outline:3px solid rgba(178,58,72,0.35);outline-offset:3px}
   </style>
 </head>
 <body>
@@ -90,6 +99,21 @@
       <h2 id="fool-title">The Relatable Fool</h2>
       <p>A mirror and a philosopher. A living practice that questions the rules we were taught. I share thoughts and questions to spark yours, not to convince, but to connect.</p>
       <p class="quote">Not polished, not perfect, just real.</p>
+
+      <!-- Featured video -->
+      <div class="video-embed" aria-label="Featured Relatable Fool video">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Relatable Fool featured video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Quick links -->
+      <div class="video-cards">
+        <a class="video-card" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">
+          <strong>Hear the raw truth</strong><br> Watch on TikTok
+        </a>
+        <a class="video-card" href="https://www.instagram.com/guidedbyeddie" target="_blank" rel="noopener">
+          <strong>Short reflections</strong><br> Reels on Instagram
+        </a>
+      </div>
     </section>
 
     <section id="ripple" aria-labelledby="ripple-title">
@@ -101,6 +125,11 @@
       </div>
       <div class="banner-quote quote">Every closing feeds someone, heals someone, and loves someone who’s forgotten.</div>
       <p class="muted">It is not charity, it is restoration.</p>
+
+      <!-- Optional video -->
+      <div class="video-embed" aria-label="Ripple Project highlight">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_OR_REMOVE" title="Ripple Project highlight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section id="next" aria-labelledby="next-title">
@@ -114,7 +143,7 @@
 
     <section id="connect" aria-labelledby="connect-title">
       <h2 id="connect-title">Connect</h2>
-      <p class="muted">Walk with me for a conversation, not a pitch.</p>
+      <p class="muted">Conversation, not a pitch.</p>
       <div class="ctas">
         <a class="btn" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
         <a class="btn alt" href="https://www.instagram.com/guidedbyeddie" target="_blank" rel="noopener">Be Guided</a>
