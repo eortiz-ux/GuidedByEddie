@@ -57,7 +57,7 @@
     p{margin:1rem 0;max-width:72ch}
     .lead{font-size:1.12rem}
     .muted{color:var(--muted)}
-    .small{font-size:.95rem}
+    .small{font-size:.9rem}
     .strong{color:var(--accent);font-weight:700}
     .quote{
       border-left:4px solid var(--accent);
@@ -68,9 +68,10 @@
     }
 
     .btn{
-      display:inline-block;padding:12px 18px;border:2px solid var(--accent);
+      display:inline-block;padding:6px 10px;border:2px solid var(--accent);
       border-radius:8px;font-weight:700;text-decoration:none;
       transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+      font-size:.8rem; /* smaller buttons */
     }
     .btn.primary{background:var(--accent);color:#000}
     .btn.alt{color:var(--accent)}
@@ -91,37 +92,33 @@
     }
     .sr-skip:focus{left:16px}
 
-    @media (prefers-reduced-motion: reduce){
-      .btn:hover{transform:none;filter:none}
-      *{scroll-behavior:auto}
-    }
-
-    /* Connect grid */
+    /* Connect grid — single row of 5 */
     .ctas-grid {
       display: grid;
-      gap: 18px;
+      gap: 14px;
       margin-top: 18px;
     }
     @media(min-width:600px){
       .ctas-grid { grid-template-columns: repeat(2,1fr); }
     }
     @media(min-width:900px){
-      .ctas-grid { grid-template-columns: repeat(3,1fr); }
+      .ctas-grid { grid-template-columns: repeat(5,1fr); }
     }
     .cta-item {
       display:flex;
       flex-direction:column;
-      align-items:flex-start;
+      align-items:center;
       gap:6px;
+      text-align:center;
     }
-    #connect .btn { padding:10px 14px; font-size:.95rem; }
+    #connect .muted.small { font-size:.75rem; }
 
     /* Top navigation */
     nav.topnav {
       display:flex;gap:18px;flex-wrap:wrap;justify-content:center;
       margin-bottom:20px;padding:10px 0;border-bottom:1px solid var(--border)
     }
-    nav.topnav a{color:var(--muted);font-size:.95rem;text-decoration:none}
+    nav.topnav a{color:var(--muted);font-size:.9rem;text-decoration:none}
     nav.topnav a:hover{color:var(--text)}
   </style>
 </head>
@@ -169,7 +166,7 @@
       <div class="ctas-grid">
         <div class="cta-item">
           <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">@relatablefool</a>
-          <p class="muted small">Raw truth and stories on TikTok</p>
+          <p class="muted small">Raw truth on TikTok</p>
         </div>
       </div>
     </section>
@@ -178,7 +175,6 @@
       <h2>Raised in CHI™</h2>
       <p><u>This is where I give the spotlight to the people who need it most</u>.</p>
       <p>Raised in CHI™ is about listening to the truth from the block, from barbers, elders, immigrants, small business owners, and neighbors. No filters. No scripts. Just voices that usually get overlooked.</p>
-      <p>These stories carry lessons, struggle, and hope that can bring us closer together. It is not about chasing clout. It is about asking how did you get started, what drives you, and how can we work together to keep our culture alive.</p>
       <div class="ctas-grid">
         <div class="cta-item">
           <a class="btn alt" href="https://www.instagram.com/raisedinchi" target="_blank" rel="noopener">@raisedinchi</a>
@@ -204,11 +200,11 @@
       <div class="ctas-grid">
         <div class="cta-item">
           <a class="btn primary" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
-          <p class="muted small">Book a call and take the first step</p>
+          <p class="muted small">Book a call</p>
         </div>
         <div class="cta-item">
           <a class="btn alt" href="#connect">Join the Movement</a>
-          <p class="muted small">See ways to connect and support</p>
+          <p class="muted small">Ways to connect</p>
         </div>
       </div>
     </section>
@@ -219,23 +215,23 @@
       <div class="ctas-grid">
         <div class="cta-item">
           <a class="btn primary" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
-          <p class="muted small">Book time with me directly</p>
+          <p class="muted small">Book time</p>
         </div>
         <div class="cta-item">
           <a class="btn alt" href="https://www.instagram.com/guidedbyeddie" target="_blank" rel="noopener">@guidedbyeddie</a>
-          <p class="muted small">Daily reflections on Instagram</p>
+          <p class="muted small">Instagram</p>
         </div>
         <div class="cta-item">
           <a class="btn alt" href="https://www.facebook.com/guidedbyeddie" target="_blank" rel="noopener">Stand Together</a>
-          <p class="muted small">Community on Facebook</p>
+          <p class="muted small">Facebook</p>
         </div>
         <div class="cta-item">
           <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">@relatablefool</a>
-          <p class="muted small">Raw truth on TikTok</p>
+          <p class="muted small">TikTok</p>
         </div>
         <div class="cta-item">
           <a class="btn alt" href="https://www.instagram.com/raisedinchi" target="_blank" rel="noopener">@raisedinchi</a>
-          <p class="muted small">Suggest stories & collaborations</p>
+          <p class="muted small">Raised in CHI</p>
         </div>
       </div>
     </section>
