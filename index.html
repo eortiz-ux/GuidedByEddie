@@ -67,7 +67,6 @@
       border-radius:8px;
     }
 
-    .ctas{display:flex;flex-direction:column;gap:12px;margin-top:18px;align-items:flex-start}
     .btn{
       display:inline-block;padding:12px 18px;border:2px solid var(--accent);
       border-radius:8px;font-weight:700;text-decoration:none;
@@ -97,24 +96,58 @@
       *{scroll-behavior:auto}
     }
 
-    /* Underline emphasis */
-    u{text-underline-offset:3px;text-decoration-thickness:2px}
+    /* Connect grid */
+    .ctas-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media(min-width:600px){
+      .ctas-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media(min-width:900px){
+      .ctas-grid { grid-template-columns: repeat(3,1fr); }
+    }
+    .cta-item {
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:6px;
+    }
+    #connect .btn { padding:10px 14px; font-size:.95rem; }
+
+    /* Top navigation */
+    nav.topnav {
+      display:flex;gap:18px;flex-wrap:wrap;justify-content:center;
+      margin-bottom:20px;padding:10px 0;border-bottom:1px solid var(--border)
+    }
+    nav.topnav a{color:var(--muted);font-size:.95rem;text-decoration:none}
+    nav.topnav a:hover{color:var(--text)}
   </style>
 </head>
 <body>
   <a class="sr-skip" href="#connect">Skip to connect</a>
 
   <div class="wrap">
+    <!-- Top Navigation -->
+    <nav class="topnav" aria-label="Site">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#guided">Guided</a>
+      <a href="#fool">Relatable Fool</a>
+      <a href="#raised">Raised in CHI</a>
+      <a href="#ripple">Ripple Project</a>
+      <a href="#connect">Connect</a>
+    </nav>
+
     <header>
       <h1>The Ripple Starts with Presence</h1>
       <p class="lead"><span class="strong">This isn’t a brand, this is a movement.</span></p>
       <p class="quote">If I go broke in love, I will still be rich in spirit.</p>
-     
     </header>
 
     <section id="manifesto">
       <h2>Manifesto</h2>
-      <p>I am not here to look better than you, I am here to serve you. <u>Presence over performance</u>. <u>People over pockets.</p>
+      <p>I am not here to look better than you, I am here to serve you. <u>Presence over performance</u>. <u>People over pockets.</u></p>
       <p>I just so happen to be a realtor, but I refuse to be a cookie cutter one. Not polished, not perfect, just real.</p>
       <p>For too long, I felt wrong for caring. I was told my heart did not belong here. Now I know it is the only thing that does.</p>
       <p class="quote">This space is for the ones who were told they care too much, and for anyone trying to heal what they did not break.</p>
@@ -128,20 +161,16 @@
         <div class="card"><strong>Impact</strong><br>Feeding people, supporting animals, funding micro scholarships.</div>
         <div class="card"><strong>Transparency</strong><br>Plain language, clear steps, steady updates.</div>
       </div>
-      <div class="ctas" style="margin-top:16px">
-        <a class="btn alt" href="https://www.instagram.com/guidedbyeddie" target="_blank" rel="noopener">Be Guided</a>
-        <p class="muted small">Daily reflections on Instagram</p>
-        <a class="btn alt" href="https://www.facebook.com/guidedbyeddie" target="_blank" rel="noopener">Stand Together</a>
-        <p class="muted small">Community on Facebook</p>
-      </div>
     </section>
 
     <section id="fool">
       <h2>Relatable Fool™</h2>
       <p>The Relatable Fool is where I share the conversations I have with myself, the ones you might be having too. It is not polished, it is not branded. It is me looking for truth in a world that feels too loud and too fake. I am tired of the numbness. I am tired of the facade. I just want something real, and maybe this is where you will find it too.</p>
-      <div class="ctas">
-        <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">The Ripple is Real</a>
-        <p class="muted small">Raw truth and stories on TikTok</p>
+      <div class="ctas-grid">
+        <div class="cta-item">
+          <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">@relatablefool</a>
+          <p class="muted small">Raw truth and stories on TikTok</p>
+        </div>
       </div>
     </section>
 
@@ -150,10 +179,11 @@
       <p><u>This is where I give the spotlight to the people who need it most</u>.</p>
       <p>Raised in CHI™ is about listening to the truth from the block, from barbers, elders, immigrants, small business owners, and neighbors. No filters. No scripts. Just voices that usually get overlooked.</p>
       <p>These stories carry lessons, struggle, and hope that can bring us closer together. It is not about chasing clout. It is about asking how did you get started, what drives you, and how can we work together to keep our culture alive.</p>
-      <p>When I sit down with someone, it is not just for the interview. It is a chance to collaborate, to host events, or to help in whatever way we can. Because their story does more than inspire. It gives us a chance to build community again.</p>
-      <div class="ctas">
-        <a class="btn alt" href="https://www.instagram.com/raisedinchi" target="_blank" rel="noopener">@raisedinchi</a>
-        <p class="muted small">Suggest an interview or get involved</p>
+      <div class="ctas-grid">
+        <div class="cta-item">
+          <a class="btn alt" href="https://www.instagram.com/raisedinchi" target="_blank" rel="noopener">@raisedinchi</a>
+          <p class="muted small">Suggest an interview or get involved</p>
+        </div>
       </div>
     </section>
 
@@ -171,28 +201,42 @@
     <section id="next">
       <h2>What Comes Next</h2>
       <p>You are not alone. We are here together. This will be our platform, to heal, to rebuild, to remember.</p>
-      <div class="ctas">
-        <a class="btn primary" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
-        <p class="muted small">Book a call and take the first step</p>
-        <a class="btn alt" href="#connect">Join the Movement</a>
-        <p class="muted small">See ways to connect and support</p>
+      <div class="ctas-grid">
+        <div class="cta-item">
+          <a class="btn primary" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
+          <p class="muted small">Book a call and take the first step</p>
+        </div>
+        <div class="cta-item">
+          <a class="btn alt" href="#connect">Join the Movement</a>
+          <p class="muted small">See ways to connect and support</p>
+        </div>
       </div>
     </section>
 
     <section id="connect">
       <h2>Connect</h2>
       <p class="muted">Conversation, not a pitch. Choose the door that fits you.</p>
-      <div class="ctas">
-        <a class="btn primary" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
-        <p class="muted small">Book time with me directly</p>
-        <a class="btn alt" href="https://www.instagram.com/guidedbyeddie" target="_blank" rel="noopener">Be Guided</a>
-        <p class="muted small">Follow reflections and updates</p>
-        <a class="btn alt" href="https://www.facebook.com/guidedbyeddie" target="_blank" rel="noopener">Stand Together</a>
-        <p class="muted small">Connect with the community on Facebook</p>
-        <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">The Ripple is Real</a>
-        <p class="muted small">Watch the raw feed on TikTok</p>
-        <a class="btn alt" href="https://www.instagram.com/raisedinchi" target="_blank" rel="noopener">Raised in CHI</a>
-        <p class="muted small">Suggest stories and collaborations</p>
+      <div class="ctas-grid">
+        <div class="cta-item">
+          <a class="btn primary" href="https://calendly.com/guidedbyeddie" target="_blank" rel="noopener">Start the Ripple</a>
+          <p class="muted small">Book time with me directly</p>
+        </div>
+        <div class="cta-item">
+          <a class="btn alt" href="https://www.instagram.com/guidedbyeddie" target="_blank" rel="noopener">@guidedbyeddie</a>
+          <p class="muted small">Daily reflections on Instagram</p>
+        </div>
+        <div class="cta-item">
+          <a class="btn alt" href="https://www.facebook.com/guidedbyeddie" target="_blank" rel="noopener">Stand Together</a>
+          <p class="muted small">Community on Facebook</p>
+        </div>
+        <div class="cta-item">
+          <a class="btn alt" href="https://www.tiktok.com/@relatablefool" target="_blank" rel="noopener">@relatablefool</a>
+          <p class="muted small">Raw truth on TikTok</p>
+        </div>
+        <div class="cta-item">
+          <a class="btn alt" href="https://www.instagram.com/raisedinchi" target="_blank" rel="noopener">@raisedinchi</a>
+          <p class="muted small">Suggest stories & collaborations</p>
+        </div>
       </div>
     </section>
 
