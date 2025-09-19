@@ -4,3 +4,5 @@ This repository provides resources and tools for users to learn and explore vari
 
 ## Website
 For more information, visit [guidedbyeddie.com](https://guidedbyeddie.com).
+
+The website link has been confirmed and updated.
